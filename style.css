@@ -30,6 +30,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 20px;
+  position: relative;
 }
 
 .game-shell {
@@ -271,6 +272,77 @@ h1 {
   padding: 12px;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.blurry-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 50;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.blurry-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hospital-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 11, 14, 0.84);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+}
+
+.hospital-overlay.hidden {
+  display: none;
+}
+
+.hospital-panel {
+  width: min(620px, 90vw);
+  background: rgba(17, 27, 31, 0.95);
+  border: 1px solid rgba(143, 233, 255, 0.5);
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 0 0 32px rgba(143, 233, 255, 0.12);
+  text-align: center;
+}
+
+.hospital-sign {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--gold);
+  letter-spacing: 0.24em;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hospital-panel h2 {
+  margin: 0 0 16px;
+  color: var(--cyan);
+}
+
+.hospital-panel p {
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.wake-button {
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(143, 233, 255, 0.1);
+  color: var(--text);
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 @media (max-width: 980px) {

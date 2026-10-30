@@ -1,32 +1,30 @@
 # Anoop & Kitty: Murder in Thornfield
 
-A browser detective game inspired by your murder mystery story.
+A realistic noir-style detective mystery in a browser.
 
 ## How to play
 
-1. Open a terminal in the repo folder.
+1. Open a terminal in the project folder.
 2. Run:
    `python -m http.server 8000`
 3. Visit:
    `http://localhost:8000`
 
-## Gameplay
+## Story features
 
-- Play as Detective Anoop
-- Use Kitty as a clue-sniffing partner
-- Inspect the crime scene, question suspects, visit the town, and search the house
-- Collect evidence and accuse the right suspect in the final confrontation
+- Detective Anoop and cat partner Kitty
+- Murder investigation with suspect questioning
+- Evidence collection from the crime scene, town, and house
+- Hidden thread and brass key clue meaning
+- Final confrontation and hospital recovery sequence
+- Blurry-screen hit effect and wake-up scene
 
-## Included story elements
+## Meaning of the thread
 
-- Mother, father, and servant suspects
-- Knife, thread, key, and airbag evidence
-- Hidden clue meaning: the thread was tied around the hidden key to hide evidence
-- Autopsy and witness investigation
-- Final villain reveal and detective ending
+The thread is not random: it was tied around the hidden brass key to conceal it in the ceiling tile. That makes it a deliberate clue used to hide evidence, not a coincidence.
 
 ## Files
 
-- `index.html` — UI structure
-- `style.css` — noir detective styling and pseudo-3D visual treatment
-- `script.js` — logic, story flow, and investigation system
+- `index.html` — game layout and hospital overlay
+- `style.css` — realistic dramatic visual styling
+- `script.js` — gameplay flow, investigation logic, and hit/wake transition

@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anoop and Kitty: Murder in Thornfield</title>
+    <title>Anoop & Kitty: Murder in Thornfield</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="blurryOverlay" class="blurry-overlay hidden"></div>
+
     <div class="game-shell">
       <header class="topbar">
         <div>
@@ -52,6 +54,16 @@
           <div id="kittyNotes" class="kitty-notes">Kitty is ready to sniff out clues.</div>
         </aside>
       </main>
+    </div>
+
+    <div id="hospitalOverlay" class="hospital-overlay hidden">
+      <div class="hospital-panel">
+        <div class="hospital-sign">HOSPITAL</div>
+        <h2>You woke up in the hospital</h2>
+        <p>The baseball bat hit hard. Your vision blurred, the room spun, and then the world went dark.</p>
+        <p>Now you are recovering under monitored care. Kitty waits by your bed, tail twitching, as if to remind you the case is not finished.</p>
+        <button id="wakeButton" class="wake-button">Get out of bed and continue the case</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
