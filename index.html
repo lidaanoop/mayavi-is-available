@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="blurryOverlay" class="blurry-overlay hidden"></div>
+    <div id="blurScreen" class="blur-screen hidden"></div>
 
     <div class="game-shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">Detective Case File</p>
+          <p class="eyebrow">Case File No. 14</p>
           <h1>Anoop & Kitty</h1>
         </div>
         <div class="status-strip">
@@ -28,7 +28,7 @@
           <button class="tab active" data-phase="intro">Case Start</button>
           <button class="tab" data-phase="scene">Crime Scene</button>
           <button class="tab" data-phase="suspects">Question Suspects</button>
-          <button class="tab" data-phase="town">Town Investigation</button>
+          <button class="tab" data-phase="town">Town</button>
           <button class="tab" data-phase="house">Search House</button>
           <button class="tab" data-phase="autopsy">Autopsy</button>
           <button class="tab" data-phase="finale">Finale</button>
@@ -42,16 +42,32 @@
             <div class="scene-note" id="sceneNote">The crime is waiting.</div>
           </div>
 
-          <div id="storyBox" class="story-box"></div>
-          <div id="choices" class="choices"></div>
-          <div id="evidenceList" class="evidence-list"></div>
+          <div class="report-panel">
+            <div id="storyBox" class="story-box"></div>
+            <div id="choices" class="choices"></div>
+          </div>
+
+          <div class="evidence-panel">
+            <h3>Collected Evidence</h3>
+            <div id="evidenceList" class="evidence-list"></div>
+          </div>
         </section>
 
         <aside class="sidebar right">
           <h3>Suspects</h3>
           <ul id="suspectList" class="suspect-list"></ul>
+
           <h3>Kitty Notes</h3>
           <div id="kittyNotes" class="kitty-notes">Kitty is ready to sniff out clues.</div>
+
+          <h3>Map</h3>
+          <div class="map-box">
+            <div class="map-node active">Scene</div>
+            <div class="map-node">Town</div>
+            <div class="map-node">House</div>
+            <div class="map-node">Autopsy</div>
+            <div class="map-node">Finale</div>
+          </div>
         </aside>
       </main>
     </div>
@@ -60,8 +76,8 @@
       <div class="hospital-panel">
         <div class="hospital-sign">HOSPITAL</div>
         <h2>You woke up in the hospital</h2>
-        <p>The baseball bat hit hard. Your vision blurred, the room spun, and then the world went dark.</p>
-        <p>Now you are recovering under monitored care. Kitty waits by your bed, tail twitching, as if to remind you the case is not finished.</p>
+        <p>The baseball bat struck hard. Your vision blurred, your ears rang, and everything went dark.</p>
+        <p>You are awake now, bandaged and shaken, but the case is still alive in your memory.</p>
         <button id="wakeButton" class="wake-button">Get out of bed and continue the case</button>
       </div>
     </div>
