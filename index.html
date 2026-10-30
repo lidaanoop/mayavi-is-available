@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anoop and Kitty: Murder in Thornfield</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Detective Case File</p>
+          <h1>Anoop & Kitty</h1>
+        </div>
+        <div class="status-strip">
+          <span>Detective: Anoop</span>
+          <span>Partner: Kitty</span>
+          <span>Evidence: <strong id="evidenceCount">0</strong></span>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar left">
+          <h3>Case Board</h3>
+          <button class="tab active" data-phase="intro">Case Start</button>
+          <button class="tab" data-phase="scene">Crime Scene</button>
+          <button class="tab" data-phase="suspects">Question Suspects</button>
+          <button class="tab" data-phase="town">Town Investigation</button>
+          <button class="tab" data-phase="house">Search House</button>
+          <button class="tab" data-phase="autopsy">Autopsy</button>
+          <button class="tab" data-phase="finale">Finale</button>
+        </aside>
+
+        <section class="main-panel">
+          <div id="sceneVisual" class="scene-visual">
+            <div class="scene-glow"></div>
+            <div class="scene-figure detective"></div>
+            <div class="scene-figure cat"></div>
+            <div class="scene-note" id="sceneNote">The crime is waiting.</div>
+          </div>
+
+          <div id="storyBox" class="story-box"></div>
+          <div id="choices" class="choices"></div>
+          <div id="evidenceList" class="evidence-list"></div>
+        </section>
+
+        <aside class="sidebar right">
+          <h3>Suspects</h3>
+          <ul id="suspectList" class="suspect-list"></ul>
+          <h3>Kitty Notes</h3>
+          <div id="kittyNotes" class="kitty-notes">Kitty is ready to sniff out clues.</div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
